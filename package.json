@@ -1,0 +1,9 @@
+{
+  "name": "fanlock",
+  "version": "1.0.0",
+  "description": "A universal content locker for blog by using Fan token from Matataki.io",
+  "main": "index.js",
+  "repository": "https://github.com/nekomeowww/fanlock",
+  "author": "Ayaka Neko <neko@ayaka.moe>",
+  "license": "MIT"
+}
