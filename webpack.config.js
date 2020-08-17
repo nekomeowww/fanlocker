@@ -6,13 +6,13 @@ const isDev = ENV !== 'production'
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  entry: './fanlock.js',
+  entry: './fanlocker.js',
 
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist',
-    filename: 'fanlock.js',
-    library: 'FanLock',
+    filename: 'fanlocker.js',
+    library: 'FanLocker',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
