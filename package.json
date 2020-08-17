@@ -2,8 +2,20 @@
   "name": "fanlock",
   "version": "1.0.0",
   "description": "A universal content locker for blog by using Fan token from Matataki.io",
-  "main": "index.js",
+  "main": "dist/fanlock.js",
   "repository": "https://github.com/nekomeowww/fanlock",
   "author": "Ayaka Neko <neko@ayaka.moe>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "webpack": "^4.44.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "rimraf": "^3.0.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "build": "rimraf ./dist && cross-env NODE_ENV=production webpack --hide-modules"
+  }
 }
