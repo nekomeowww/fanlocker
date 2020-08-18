@@ -335,8 +335,12 @@ class FanLock {
         axios.post(`https://developer.matataki.io/api/app/oauth`, { clientId: clientId, clientSecret: clientSecret, redirect_uri: `${window.location.origin}${window.location.pathname}?callback=true` })
         let query = queryParse()
         let cookie = getCookie('matatakitoken')
-        if (cookie) {
+        let result = disassemble(cookie)
+        if (cookie && Date.now() < result.exp) {
             query.token = cookie
+        }
+        else {
+            document.cookie = 'matatakitoken=; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
         }
         this.tokenId = parseInt(mainElement.getElementsByTagName('script')['hpmToken'].innerText)
         this.tokenAmount = parseInt(mainElement.getElementsByTagName('script')['hpmAmount'].innerText)
