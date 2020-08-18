@@ -5,6 +5,7 @@
 <img src="https://github.com/nekomeowww/fanlocker/workflows/Node%20Test/badge.svg" />
 <img src="https://github.com/nekomeowww/fanlocker/workflows/Node%20Build/badge.svg" />
 </p>
+
 ## 创建
 
 前往 [Matataki 开发者中心](https://developer.matataki.io) 创建一个名称为你的博客的 App，在 Oauth2 页面可以获取 ClientId 和 ClientSecret，把他们复制下来。
