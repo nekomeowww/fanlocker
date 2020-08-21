@@ -28,9 +28,9 @@ data.matataki.name || data.source.replace(/^_post\/|^.*\//, '').replace(/\.md$/,
 ```
 <script src="https://unpkg.com/fanlocker/dist/fanlocker.js"></script>
 <script>
-	let fl = new FanLock({
-            clientId: '你在开发者中心获取的 Client ID',
-            clientSecret: '你在开发者中心获取的 ClientSecret'
+  let fl = new FanLocker({
+    clientId: '你在开发者中心获取的 Client ID',
+    clientSecret: '你在开发者中心获取的 ClientSecret'
   })
 </script>
 ```
@@ -41,11 +41,11 @@ data.matataki.name || data.source.replace(/^_post\/|^.*\//, '').replace(/\.md$/,
 
 ```
 matataki:
-	token: 0
-	password: password
-	name: name
-	amount: 0
-	mode: hold | pay
+  token: 0
+  password: password
+  name: name
+  amount: 0
+  mode: hold | pay
 ```
 
 1. Token ID（Fan 票 ID）
