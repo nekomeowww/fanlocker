@@ -327,20 +327,20 @@ const getCookie = (cname) => {
     return ""
 }
 
-class FanLock {
+class FanLocker {
     constructor({ clientId, clientSecret }) {
         this.clientId = clientId
         this.clientSecret = clientSecret
 
         axios.post(`https://developer.matataki.io/api/app/oauth`, { clientId: clientId, clientSecret: clientSecret, redirect_uri: `${window.location.origin}${window.location.pathname}?callback=true` })
         let query = queryParse()
-        let cookie = getCookie('matatakitoken')
+        let cookie = getCookie('matataki_token')
         let result = disassemble(cookie)
         if (cookie && Date.now() < result.exp) {
             query.token = cookie
         }
         else {
-            document.cookie = 'matatakitoken=; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+            document.cookie = 'matataki_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
         }
         this.tokenId = parseInt(mainElement.getElementsByTagName('script')['hpmToken'].innerText)
         this.tokenAmount = parseInt(mainElement.getElementsByTagName('script')['hpmAmount'].innerText)
@@ -351,7 +351,7 @@ class FanLock {
             document.getElementById('unlock-btn').style.display = 'inline'
 
             let user = disassemble(query.token)
-            document.cookie='matatakitoken=' + query.token
+            document.cookie='matataki_token=' + query.token
             getUserProfile(user.id).then(res => {
                 let userProfile = res.data.data
                 axios({
