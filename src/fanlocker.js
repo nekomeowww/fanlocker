@@ -373,4 +373,4 @@ class FanLocker {
     }
 }
 
-module.exports = FanLock
+module.exports = FanLocker

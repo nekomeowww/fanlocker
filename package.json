@@ -1,6 +1,6 @@
 {
   "name": "fanlocker",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A universal content locker for blog by using Fan token from Matataki.io",
   "main": "dist/fanlocker.js",
   "repository": "https://github.com/nekomeowww/fanlock",
