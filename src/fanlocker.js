@@ -243,7 +243,7 @@ const disassemble = (token) => {
 }
 
 const getUserProfile = (uid) => {
-    return axios.get('https://api.smartsignature.io' + `/user/${uid}`)
+    return axios.get('https://api.mttk.net' + `/user/${uid}`)
 }
 
 const convertDecimals = (amount, decimal) => {
@@ -355,7 +355,7 @@ class FanLocker {
             getUserProfile(user.id).then(res => {
                 let userProfile = res.data.data
                 axios({
-                    url: 'https://api.smartsignature.io/token/tokenlist?pagesize=999&order=0&page=1',
+                    url: 'https://api.mttk.net/token/tokenlist?pagesize=999&order=0&page=1',
                     method: 'GET',
                     headers: { 'x-access-token': query.token }
                 }).then(res => {
